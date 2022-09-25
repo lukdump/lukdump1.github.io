@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First project</title>
+    <link rel="stylesheet" href="fproj.css">
+    <script src="/fproj.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <p id="question">Pogi ba ako?</p>
+            <button class="btn" id="yes">Yes</button>
+            <button class="btn" id="no">No</button>
+        </div>
+    </div>
+</body>
+<script>
+    const noBtn = document.getElementById('no');
+    const yesBtn = document.getElementById('yes');
+    const ques = document.getElementById('question');
+    noBtn.addEventListener("click", ()=>{
+        let rand = Math.floor(Math.random() * (-30 - 30) + 1);
+        let rand2 = Math.floor(Math.random() * (-30 - 30) + 1);
+        noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+    });
+    yesBtn.addEventListener("click", ()=>{
+        ques.innerHTML ="omsim i know";
+    })
+</script>
+</html>
